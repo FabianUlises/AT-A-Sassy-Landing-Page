@@ -1,6 +1,6 @@
-$light-color: lightgrey;
-$font-stack: 'sans-serif';
-
+@import '_config';
+@import '_btnConfig';
+@import '_utilities';
 
 * {
   box-sizing: border-box;
@@ -23,14 +23,55 @@ a {
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
 
-  // Take a look at the other files we've built already. How can they be useful here?
+  img {
+    display: block;
+    width: 600px;
+  }
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+  a {
+    color: inherit;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display:flex;
+      gap: 2rem;
+      list-style: none;
+    }
+  }
+
+  .box {
+    min-width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    background-color: darkslateblue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    .hero-text {
+      max-width: 35%;
+      margin-right: 3rem;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
